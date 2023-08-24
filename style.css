@@ -31,6 +31,7 @@ body{
     /*background - damos para esse tipo de atalho o nome => shorthands or atalhos(shortcuts) */
     background: var(--bg-url) no-repeat top center/cover;
     /*perceba que o código ficou mais enxuto*/
+    height: 100vh;
 }
 
 body *{
@@ -39,12 +40,15 @@ body *{
 }
 
 #container{
-    width: 360px;
+    width: 100%;
     /* border: 1px solid red; */
+    max-width: 588px;
     margin: 56px auto 0px;
+    padding: 0 24px;
 }
 
 #profile{
+
     text-align: center;
     padding: 24px;
 }
@@ -110,3 +114,13 @@ footer{
     text-align: center;
     font-size: 14px;
 } 
+
+@media (min-width: 700px){
+    :root {
+        --bg-url: url(./assets/bg-desktop.jpg);
+    }
+
+    .light{
+        --bg-url: url(./assets/bg-desktop-light.jpg);
+    }
+}
